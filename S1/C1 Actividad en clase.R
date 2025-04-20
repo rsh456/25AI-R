@@ -1,3 +1,6 @@
+install.packages("dplyr")
+library(dplyr)
+
 # Tarea 1: Exploración inicial del dataset
 # Cargar el dataset mtcars
 # Mostrar las primeras 7 filas  del dataset. (usa help)
@@ -18,7 +21,11 @@ num_rows <- nrow(mtcars)
 num_cols <- ncol(mtcars)
 cat("Numero de columnas:",num_cols,"\nNumero de filas:", num_rows)
 
+mpg_sd <- sd(mtcars$mpg)
+hp_sd <- sd(mtcars$hp)
+qsec_sd <- sd(mtcars$qsec)
 
+cat(mpg_sd, hp_sd, qsec_sd)
 # Tarea 2: Filtrado y selección de datos
 # Filtrar los autos que tienen más de 10 millas por galón (mpg > 10).
 # Seleccionar solo las columnas mpg, cyl, hp y wt.
